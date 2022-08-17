@@ -1,0 +1,142 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--cream);
+}
+
+main {
+    width: 90%;
+    max-width: 550px;
+    border-radius: 12px;
+    margin: 1.25rem auto;
+    background-color: var(--white);
+}
+
+div {
+    padding: 1.5rem;
+}
+
+picture > img {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.type-of-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--grayish-blue);
+    letter-spacing: 4px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--grayish-blue);
+    line-height: 1.6;
+}
+
+.current-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--dark-cyan);
+}
+
+.previous-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: var(--grayish-blue);
+    text-decoration: line-through;
+}
+
+button {
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding: 1em;
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+span, h1, .prices {
+    padding: 0.8rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+@media (hover: hover) {
+    button:hover {
+        background-color: var(--dark-blue);
+    }
+}
+
+.attribution {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: var(--grayish-blue);
+}
+
+.attribution a {
+    color: var(--dark-cyan)
+}
+
+a:hover {
+    color: var(--dark-blue);
+}
+
+/* Desktop & Tablet */
+@media only screen and (min-width: 500px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    picture {
+        grid-column: 1 / span 1;
+    }
+
+    div {
+        grid-column: 2 / span 1;
+    }
+
+    picture > img {
+        height: 100%;
+        border-radius: 12px 0px 0px 12px;
+    }
+}
